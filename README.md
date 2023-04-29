@@ -24,7 +24,7 @@ So, I made the hardware side with Arduino UNO+MCP2515 canbus module.
 +-------------+           +-------------+           +-------------+
 | Windows     |           |             |           |   MCP2515   |
 | Application |<--(USB)-->| Arduino-UNO |<--(SPI)-->|   canbus    |<--(CAN BUS)-->CAN Network
-|             |           |             |           |   module    |
+|             |           | Mega 2560   |           |   module    |
 +-------------+           +-------------+           +-------------|
 ```
 
@@ -37,7 +37,7 @@ Windows applications can be downloaded here.
    - [V8.00](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program)   
 
 2. Arduino UNO   
-It also works on ATMega32u4 and ATMega2560.   
+It also works on ATMega32u4 and ATMega2560. Another pins are used for ATMega2560
 
 3. MPC2515 canbus module   
 You can get it from AliExpress or eBay for under $2.   
@@ -52,15 +52,15 @@ You can download from [here](https://github.com/coryjfowler/MCP_CAN_lib).
 
 # Connection with CAN bus module
 
-|Module||UNO|
-|:-:|:-:|:-:|
-|INT|--|Pin#2|
-|SCK|--|Pin#13|
-|SI|--|Pin#11|
-|SO|--|Pin#12|
-|CS|--|Pin#10|
-|GND|--|GND|
-|VCC|--|5V|
+|Module||UNO|Mega 2560|
+|:-:|:-:|:-:|:-:|
+|INT|--|Pin#2|Pin#||
+|SCK|--|Pin#13|Pin#52|
+|SI|--|Pin#11|Pin#51|
+|SO|--|Pin#12|Pin#50|
+|CS|--|Pin#10|Pin#53|
+|GND|--|GND|GND|
+|VCC|--|5V|5V|
 
 
 # How to use
